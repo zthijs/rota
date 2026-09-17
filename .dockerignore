@@ -1,0 +1,11 @@
+# Everything is excluded by default, so a new file at the root cannot leak into an image by
+# accident — least of all .env.local, which holds the signing secret.
+*
+
+!package.json
+!bun.lock
+!tsconfig.json
+!src
+
+# Tests are not worth shipping.
+src/**/*.test.ts
